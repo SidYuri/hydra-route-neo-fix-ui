@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Hydra Route Neo — UI Fix
 // @namespace    hydra-route-neo
-// @version      0.1
+// @version      0.2
 // @description  Адаптивный полноширинный грид и кастомные скроллбары для Hydra Route Neo
 // @author       SidYuri
 // @include      http://192.168.*:2000/*
@@ -29,7 +29,7 @@
         /* Переключаем список групп доменов на адаптивный грид */
         .policy-card-content-inner {
             display: grid !important;
-            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)) !important;
+            grid-template-columns: repeat(auto-fill, minmax(min(380px, 100%), 1fr)) !important;
             flex-direction: unset !important;
             align-items: start !important;
         }
@@ -47,16 +47,22 @@
             box-sizing: border-box !important;
         }
 
-        /* label внутри хедера не должен распирать всю ширину */
-        .domain-header label.domain-entry {
-            width: auto !important;
-            flex: 1 1 auto !important;
-            min-width: 0 !important;
+        /* Название группы в хедере — не сжимаем, не обрезаем */
+        .domain-header > *:not(button) {
+            min-width: max-content !important;
+            overflow: visible !important;
+            text-overflow: clip !important;
         }
 
         /* Кнопка "+ поле" всегда в конце и по ширине ячейки */
         .add-field-btn {
             align-self: start !important;
+        }
+
+        /* Снимаем жёсткий лимит высоты при большом количестве групп */
+        .policy-card-content {
+            max-height: none !important;
+            overflow: visible !important;
         }
 
         /* Тонкие кастомные скроллбары — светлая тема */
