@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Hydra Route Neo — UI Fix
 // @namespace    hydra-route-neo
-// @version      0.2
+// @version      0.3
 // @description  Адаптивный полноширинный грид и кастомные скроллбары для Hydra Route Neo
 // @author       SidYuri
 // @include      http://192.168.*:2000/*
