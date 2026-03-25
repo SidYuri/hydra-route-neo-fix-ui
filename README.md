@@ -2,6 +2,9 @@
 
 Пользовательский скрипт Tampermonkey для веб-интерфейса [Hydra Route Neo](https://github.com/Ground-Zerro/HydraRoute), добавляющий адаптивный полноширинный грид и красивые скроллбары.
 
+> **Обновление:** начиная с актуальных версий Hydra Route Neo большинство правок уже встроено в интерфейс.
+> Можешь посмотреть мою реализацию **[тёмной темы в стиле Keenetic](https://github.com/SidYuri/hydra-route-neo-dark-theme)**.
+
 ---
 
 ## Что исправляет
