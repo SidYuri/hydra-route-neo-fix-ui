@@ -59,8 +59,8 @@
             align-self: start !important;
         }
 
-        /* Снимаем жёсткий лимит высоты при большом количестве групп */
-        .policy-card-content {
+        /* Снимаем жёсткий лимит высоты — только когда карточка развёрнута */
+        .policy-card:not(.policy-card--collapsed) .policy-card-content {
             max-height: none !important;
             overflow: visible !important;
         }
